@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>lgrecoTheme</Name>
+    <ProjectGuid>4b8b3990-8561-460d-aec4-acc65bb08a37</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>lgrecoTheme</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>lgrecoTheme</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="404.php" />
+    <Compile Include="archive.php" />
+    <Compile Include="attachment.php" />
+    <Compile Include="author.php" />
+    <Compile Include="comments.php" />
+    <Compile Include="footer.php" />
+    <Compile Include="functions.php" />
+    <Compile Include="header.php" />
+    <Compile Include="image.php" />
+    <Compile Include="index.php" />
+    <Compile Include="library\admin.php" />
+    <Compile Include="library\bones.php" />
+    <Compile Include="library\shortcodes.php" />
+    <Compile Include="page-full-width.php" />
+    <Compile Include="page-homepage.php" />
+    <Compile Include="page-left-sidebar.php" />
+    <Compile Include="page-underconstruction.php" />
+    <Compile Include="page.php" />
+    <Compile Include="search.php" />
+    <Compile Include="searchform.php" />
+    <Compile Include="sidebar-sidebar2.php" />
+    <Compile Include="sidebar.php" />
+    <Compile Include="single.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="languages\" />
+    <Folder Include="library\" />
+    <Folder Include="library\css\" />
+    <Folder Include="library\fonts\" />
+    <Folder Include="library\img\" />
+    <Folder Include="library\js\" />
+    <Folder Include="library\js\libs\" />
+    <Folder Include="library\less\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="editor-style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\1col.png" />
+    <Content Include="images\2cl.png" />
+    <Content Include="images\2cr.png" />
+    <Content Include="languages\default.pot" />
+    <Content Include="languages\de_DE.mo" />
+    <Content Include="languages\de_DE.po" />
+    <Content Include="languages\es_ES.mo" />
+    <Content Include="languages\es_ES.po" />
+    <Content Include="languages\fr_FR.mo" />
+    <Content Include="languages\fr_FR.po" />
+    <Content Include="languages\nl_NL.mo" />
+    <Content Include="languages\nl_NL.po" />
+    <Content Include="languages\pt_BR.mo" />
+    <Content Include="languages\pt_BR.po" />
+    <Content Include="languages\pt_PT" />
+    <Content Include="languages\Readme.txt" />
+    <Content Include="library\css\bootstrap.css" />
+    <Content Include="library\css\login.css" />
+    <Content Include="library\css\normalize.css" />
+    <Content Include="library\css\theme.css" />
+    <Content Include="library\fonts\glyphiconshalflings-regular.eot" />
+    <Content Include="library\fonts\glyphiconshalflings-regular.otf" />
+    <Content Include="library\fonts\glyphiconshalflings-regular.svg" />
+    <Content Include="library\fonts\glyphiconshalflings-regular.ttf" />
+    <Content Include="library\fonts\glyphiconshalflings-regular.woff" />
+    <Content Include="library\img\glyphicons-halflings-white.png" />
+    <Content Include="library\img\glyphicons-halflings.png" />
+    <Content Include="library\js\affix.js" />
+    <Content Include="library\js\alert.js" />
+    <Content Include="library\js\bootstrap-ck.js" />
+    <Content Include="library\js\bootstrap.js" />
+    <Content Include="library\js\bootstrap.min-ck.js" />
+    <Content Include="library\js\bootstrap.min.js" />
+    <Content Include="library\js\button.js" />
+    <Content Include="library\js\carousel.js" />
+    <Content Include="library\js\collapse.js" />
+    <Content Include="library\js\dropdown.js" />
+    <Content Include="library\js\libs\jquery-1.7.1.min.js" />
+    <Content Include="library\js\libs\selectivizr-min.js" />
+    <Content Include="library\js\modal.js" />
+    <Content Include="library\js\modernizr.full.min.js" />
+    <Content Include="library\js\popover.js" />
+    <Content Include="library\js\scripts-ck.js" />
+    <Content Include="library\js\scripts.js" />
+    <Content Include="library\js\scrollspy.js" />
+    <Content Include="library\js\tab.js" />
+    <Content Include="library\js\tooltip.js" />
+    <Content Include="library\js\transition.js" />
+    <Content Include="library\less\alerts.less" />
+    <Content Include="library\less\badges.less" />
+    <Content Include="library\less\bootstrap.less" />
+    <Content Include="library\less\breadcrumbs.less" />
+    <Content Include="library\less\button-groups.less" />
+    <Content Include="library\less\buttons.less" />
+    <Content Include="library\less\carousel.less" />
+    <Content Include="library\less\close.less" />
+    <Content Include="library\less\code.less" />
+    <Content Include="library\less\component-animations.less" />
+    <Content Include="library\less\dropdowns.less" />
+    <Content Include="library\less\forms.less" />
+    <Content Include="library\less\glyphicons.less" />
+    <Content Include="library\less\grid.less" />
+    <Content Include="library\less\input-groups.less" />
+    <Content Include="library\less\jumbotron.less" />
+    <Content Include="library\less\labels.less" />
+    <Content Include="library\less\list-group.less" />
+    <Content Include="library\less\media.less" />
+    <Content Include="library\less\mixins.less" />
+    <Content Include="library\less\modals.less" />
+    <Content Include="library\less\navbar.less" />
+    <Content Include="library\less\navs.less" />
+    <Content Include="library\less\normalize.less" />
+    <Content Include="library\less\pager.less" />
+    <Content Include="library\less\pagination.less" />
+    <Content Include="library\less\panels.less" />
+    <Content Include="library\less\popovers.less" />
+    <Content Include="library\less\print.less" />
+    <Content Include="library\less\progress-bars.less" />
+    <Content Include="library\less\responsive-utilities.less" />
+    <Content Include="library\less\scaffolding.less" />
+    <Content Include="library\less\tables.less" />
+    <Content Include="library\less\theme.less" />
+    <Content Include="library\less\thumbnails.less" />
+    <Content Include="library\less\tooltip.less" />
+    <Content Include="library\less\type.less" />
+    <Content Include="library\less\utilities.less" />
+    <Content Include="library\less\variables.less" />
+    <Content Include="library\less\wells.less" />
+    <Content Include="library\less\wp.less" />
+    <Content Include="library\lgreco.less" />
+    <Content Include="library\log.txt" />
+    <Content Include="logo.png" />
+    <Content Include="page-underconstruction.css" />
+    <Content Include="README.md" />
+    <Content Include="screenshot.png" />
+    <Content Include="style.css" />
+  </ItemGroup>
+</Project>

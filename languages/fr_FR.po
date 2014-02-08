@@ -1,19 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPBS (fr_FR)\n"
-"POT-Creation-Date: 2012-10-17 23:02-0300\n"
+"POT-Creation-Date: 2014-02-08 21:20+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alexandre JULIEN <alex.julien13@gmail.com>\n"
 "Language-Team: Alexandre JULIEN <http://www.alexandre-julien.com> <alex."
 "julien13@gmail.com>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: /Users/kafran/Documents/wordpress-bootstrap\n"
-"Language: French\n"
+"X-Poedit-Basepath: C:\\---Work---\\Personal\\ΛGreco\\lgrecoTheme\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:13
@@ -56,26 +56,26 @@ msgstr "Archives mensuelles:"
 msgid "Yearly Archives:"
 msgstr "Archives annuelles:"
 
-#: archive.php:43 attachment.php:15 author.php:31 image.php:23 index.php:34
+#: archive.php:43 attachment.php:15 author.php:31 image.php:23 index.php:17
 #: search.php:17 single.php:17
 msgid "Posted"
 msgstr "Ecrit"
 
-#: archive.php:43 attachment.php:15 author.php:31 image.php:23 index.php:34
+#: archive.php:43 attachment.php:15 author.php:31 image.php:23 index.php:17
 #: search.php:17 single.php:17
 msgid "by"
 msgstr "par"
 
-#: archive.php:43 attachment.php:15 author.php:31 index.php:34 search.php:17
+#: archive.php:43 attachment.php:15 author.php:31 index.php:17 search.php:17
 #: single.php:17
 msgid "filed under"
 msgstr "déposé en vertu de"
 
-#: archive.php:70 author.php:58 index.php:59 search.php:42
+#: archive.php:70 author.php:58 index.php:42 search.php:42
 msgid "&laquo; Older Entries"
 msgstr "&laquo; Anciens articles"
 
-#: archive.php:71 author.php:59 index.php:60 search.php:43
+#: archive.php:71 author.php:59 index.php:43 search.php:43
 msgid "Newer Entries &raquo;"
 msgstr "Articles récents &raquo;"
 
@@ -87,19 +87,19 @@ msgstr "Pas encore d'article"
 msgid "Sorry, What you were looking for is not here."
 msgstr "Désolé, Qu'est-ce que vous recherchez n'est pas ici."
 
-#: attachment.php:27 image.php:53 index.php:44 page-full-width.php:30
-#: page-homepage.php:109 page-left-sidebar.php:32 page.php:24 single.php:30
+#: attachment.php:27 image.php:53 index.php:27 page-full-width.php:30
+#: page-homepage.php:48 page-left-sidebar.php:32 page.php:24 single.php:30
 msgid "Tags"
 msgstr "Tags"
 
-#: attachment.php:41 image.php:67 index.php:69 page-full-width.php:44
-#: page-homepage.php:126 page-left-sidebar.php:46 page.php:38 search.php:54
+#: attachment.php:41 image.php:67 index.php:52 page-full-width.php:44
+#: page-homepage.php:65 page-left-sidebar.php:46 page.php:38 search.php:54
 #: single.php:51
 msgid "Not Found"
 msgstr "Non trouvé"
 
-#: attachment.php:44 image.php:70 index.php:72 page-full-width.php:47
-#: page-homepage.php:129 page-left-sidebar.php:49 page.php:41 search.php:57
+#: attachment.php:44 image.php:70 index.php:55 page-full-width.php:47
+#: page-homepage.php:68 page-left-sidebar.php:49 page.php:41 search.php:57
 #: single.php:54
 msgid "Sorry, but the requested resource was not found on this site."
 msgstr "Désolé, mais la ressource demandée n'a pas été trouvée sur ce site."
@@ -138,106 +138,30 @@ msgstr "Anciens commentaires"
 msgid "Newer comments"
 msgstr "Commentaires récents"
 
-#: comments.php:68
+#: comments.php:60
 msgid "Comments are closed"
 msgstr "Les commentaires sont fermés"
 
-#: comments.php:81
-msgid "Leave a Reply"
-msgstr "Laissez une réponse"
-
-#: comments.php:81
-msgid "Leave a Reply to"
-msgstr "Laissez une réponse à"
-
-#: comments.php:84
-msgid "Cancel"
-msgstr "Annuler"
-
-#: comments.php:89
-msgid "You must be"
-msgstr "Vous devez être"
-
-#: comments.php:89
-msgid "logged in"
-msgstr "se connecter"
-
-#: comments.php:89
-msgid "to post a comment"
-msgstr "pour mettre un commentaire"
-
-#: comments.php:97
-msgid "Logged in as"
-msgstr "Connecté en tant que"
-
-#: comments.php:97
-msgid "Log out of this account"
-msgstr "Se déconnecter de ce compte"
-
-#: comments.php:97
-msgid "Log out"
-msgstr "Déconnection"
-
-#: comments.php:105
-msgid "Name"
-msgstr "Nom"
-
-#: comments.php:107
-msgid "Your Name"
-msgstr "Votre nom"
-
-#: comments.php:114
-msgid "Mail"
-msgstr "E-mail"
-
-#: comments.php:116
-msgid "Your Email"
-msgstr "Votre e-mail"
-
-#: comments.php:117
-msgid "will not be published"
-msgstr "Se sera pas publier"
-
-#: comments.php:124
-msgid "Website"
-msgstr "Site Web"
-
-#: comments.php:126
-msgid "Your Website"
-msgstr "Votre Site Web"
-
-#: comments.php:137
-msgid "Your Comment Here…"
-msgstr "Laissez un commentaire ici"
-
-#: comments.php:142
-msgid "Submit Comment"
-msgstr "Soumettre le commentaire"
-
-#: functions.php:147
+#: functions.php:140
 msgid "Edit"
 msgstr "Editer"
 
-#: functions.php:151
+#: functions.php:144
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:193
-msgid "Search for:"
-msgstr "Recherche pour:"
-
-#: functions.php:208
+#: functions.php:179
 msgid ""
 "This post is password protected. To view it please enter your password below:"
 msgstr ""
 "Cet article est protégé par un mot de passe. Pour l'afficher, veuillez "
 "saisir le mot de passe :"
 
-#: functions.php:209
+#: functions.php:180
 msgid "Password:"
 msgstr "Mot de passe:"
 
-#: header.php:116 searchform.php:5
+#: header.php:56 searchform.php:4 searchform.php:6
 msgid "Search"
 msgstr "Recherche"
 
@@ -285,7 +209,7 @@ msgstr "ISO"
 msgid "Shutter Speed"
 msgstr "Vitesse d'obturation"
 
-#: index.php:39
+#: index.php:22
 msgid "Read more &raquo;"
 msgstr "En savoir plus &raquo;"
 
@@ -305,43 +229,91 @@ msgstr "Veuillez activer des Widgets"
 msgid "Edit post"
 msgstr "Editer l'article"
 
-#: admin/options-framework.php:230
-msgid "Click OK to reset. Any theme settings will be lost!"
-msgstr ""
-"Cliquez sur OK pour réinitialiser. Tous les paramètres du thème seront "
-"perdus."
+#~ msgid "Leave a Reply"
+#~ msgstr "Laissez une réponse"
 
-#: admin/options-framework.php:263
-msgid "Default options restored."
-msgstr "Options par défaut restaurées."
+#~ msgid "Leave a Reply to"
+#~ msgstr "Laissez une réponse à"
 
-#: admin/options-framework.php:304
-msgid "Options saved."
-msgstr "Options sauvegardées."
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
 
-#: admin/options-framework.php:362
-msgid "Theme Options"
-msgstr "Paramètre du thême"
+#~ msgid "You must be"
+#~ msgstr "Vous devez être"
 
-#: admin/options-medialibrary-uploader.php:26
-msgid "Options Framework Internal Container"
-msgstr "Options internes du Framework Container"
+#~ msgid "logged in"
+#~ msgstr "se connecter"
 
-#: admin/options-medialibrary-uploader.php:128
-msgid "Upload"
-msgstr "Télécharger"
+#~ msgid "to post a comment"
+#~ msgstr "pour mettre un commentaire"
 
-#: admin/options-medialibrary-uploader.php:151
-msgid "View File"
-msgstr "Voir fichier"
+#~ msgid "Logged in as"
+#~ msgstr "Connecté en tant que"
 
-#: admin/options-medialibrary-uploader.php:288
-msgid "Gallery"
-msgstr "Galerie"
+#~ msgid "Log out of this account"
+#~ msgstr "Se déconnecter de ce compte"
 
-#: admin/options-medialibrary-uploader.php:288
-msgid "Previously Uploaded"
-msgstr "Précédemment téléchargé"
+#~ msgid "Log out"
+#~ msgstr "Déconnection"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Your Name"
+#~ msgstr "Votre nom"
+
+#~ msgid "Mail"
+#~ msgstr "E-mail"
+
+#~ msgid "Your Email"
+#~ msgstr "Votre e-mail"
+
+#~ msgid "will not be published"
+#~ msgstr "Se sera pas publier"
+
+#~ msgid "Website"
+#~ msgstr "Site Web"
+
+#~ msgid "Your Website"
+#~ msgstr "Votre Site Web"
+
+#~ msgid "Your Comment Here…"
+#~ msgstr "Laissez un commentaire ici"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Soumettre le commentaire"
+
+#~ msgid "Search for:"
+#~ msgstr "Recherche pour:"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr ""
+#~ "Cliquez sur OK pour réinitialiser. Tous les paramètres du thème seront "
+#~ "perdus."
+
+#~ msgid "Default options restored."
+#~ msgstr "Options par défaut restaurées."
+
+#~ msgid "Options saved."
+#~ msgstr "Options sauvegardées."
+
+#~ msgid "Theme Options"
+#~ msgstr "Paramètre du thême"
+
+#~ msgid "Options Framework Internal Container"
+#~ msgstr "Options internes du Framework Container"
+
+#~ msgid "Upload"
+#~ msgstr "Télécharger"
+
+#~ msgid "View File"
+#~ msgstr "Voir fichier"
+
+#~ msgid "Gallery"
+#~ msgstr "Galerie"
+
+#~ msgid "Previously Uploaded"
+#~ msgstr "Précédemment téléchargé"
 
 #~ msgid "<h4>%s</h4>"
 #~ msgstr "<h4>%s</h4>"
