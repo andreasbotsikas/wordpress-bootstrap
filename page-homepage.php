@@ -5,9 +5,7 @@ Template Name: Homepage
 ?>
 
 <?php get_header(); ?>
-
-<div id="content" class="clearfix row">
-    <?php require_once('slider.php'); ?>
+<?php echo do_shortcode("[metaslider id=" .  pll__('SliderId') . "]"); ?>
     <div id="main" class="col-sm-12 clearfix" role="main">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -80,7 +78,5 @@ Template Name: Homepage
 
     <?php //get_sidebar(); // sidebar 1 ?>
 
-</div>
-<!-- end #content -->
 
 <?php get_footer(); ?>

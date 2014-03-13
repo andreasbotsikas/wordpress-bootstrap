@@ -29,7 +29,11 @@
     <Compile Include="index.php" />
     <Compile Include="library\admin.php" />
     <Compile Include="library\bones.php" />
+    <Compile Include="library\lgrecoCode.php" />
     <Compile Include="library\shortcodes.php" />
+    <Compile Include="options.php" />
+    <Compile Include="page-no-head.php" />
+    <Compile Include="page-product.php" />
     <Compile Include="page-full-width.php" />
     <Compile Include="page-homepage.php" />
     <Compile Include="page-left-sidebar.php" />
@@ -40,9 +44,11 @@
     <Compile Include="sidebar-sidebar2.php" />
     <Compile Include="sidebar.php" />
     <Compile Include="single.php" />
+    <Compile Include="slider.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+    <Folder Include="images\wines\" />
     <Folder Include="languages\" />
     <Folder Include="library\" />
     <Folder Include="library\css\" />
@@ -51,6 +57,7 @@
     <Folder Include="library\js\" />
     <Folder Include="library\js\libs\" />
     <Folder Include="library\less\" />
+    <Folder Include="slider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="apple-touch-icon.png" />
@@ -59,6 +66,11 @@
     <Content Include="images\1col.png" />
     <Content Include="images\2cl.png" />
     <Content Include="images\2cr.png" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\gradient-bg.jpg" />
+    <Content Include="images\wines\aromas.png" />
+    <Content Include="images\wines\color.png" />
+    <Content Include="images\wines\taste.png" />
     <Content Include="languages\default.pot" />
     <Content Include="languages\de_DE.mo" />
     <Content Include="languages\de_DE.po" />
@@ -151,6 +163,8 @@
     <Content Include="page-underconstruction.css" />
     <Content Include="README.md" />
     <Content Include="screenshot.png" />
+    <Content Include="slider\jquery.cycle.all.js" />
+    <Content Include="slider\jquery.easing.1.3.js" />
     <Content Include="style.css" />
   </ItemGroup>
 </Project>

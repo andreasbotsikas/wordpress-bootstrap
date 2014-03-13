@@ -14,7 +14,7 @@ require_once('library/bones.php');            // core functions (don't remove)
 // Shortcodes
 require_once('library/shortcodes.php');
 
-require_once('library/lgrecoshortcodes.php'); // custom shortcodes
+require_once('library/lgrecoCode.php'); // custom shortcodes
 
 
 // Admin Functions (commented out by default)
@@ -450,7 +450,7 @@ function add_active_class($classes, $item) {
 if( !function_exists("theme_styles") ) {  
     function theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
-        wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/css/bootstrap.css', array(), '1.0', 'all' );
+        wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/less/bootstrap.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'bootstrap' );
         
         wp_register_style( 'lgreco', get_template_directory_uri() . '/library/lgreco.css', array(), '1.0', 'all' );

@@ -8,9 +8,6 @@ Template Name: Product Page
       $post_thumbnail_id = get_post_thumbnail_id();
       $featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'lgreco-product' );
 ?>
-			
-			<div id="content" class="clearfix row">
-			
 				<div id="main" class="col col-lg-12 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -56,6 +53,4 @@ Template Name: Product Page
     
 				<?php //get_sidebar(); // sidebar 1 ?>
     
-			</div> <!-- end #content -->
-
 <?php get_footer(); ?>

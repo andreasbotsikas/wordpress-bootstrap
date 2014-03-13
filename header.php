@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php wp_title( '|', true, 'right' ); ?></title>	
+	    <title><?php wp_title( ' ', true, 'right' ); ?></title>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				
 		<!-- media-queries.js (fallback) -->
@@ -35,7 +35,7 @@
 		<header role="banner">
 				
 			<div class="navbar navbar-fixed-top">
-				<div class="container drop-shadow lifted">
+				<div class="container drop-shadow lifted"><!-- main-menu -->
           
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -50,14 +50,14 @@
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
 						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 					    <?php wp_lang_links(); // Add language menu ?>
-						<?php //if(of_get_option('search_bar', '1')) {?>
+						<?php /* if(of_get_option('search_bar', '1')) {?>
 						<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 							<div class="form-group">
 								<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
 							</div>
                             <button type="submit" class="btn btn-default"><?php _e('Search','wpbootstrap'); ?></button>
 						</form>
-						<?php //} ?>
+						<?php } */ ?>
 					</div>
 
 				</div> <!-- end .container -->
@@ -65,4 +65,5 @@
 		
 		</header> <!-- end header -->
 		
-		<div class="container">
+<div class="container">
+    <div id="content" class="clearfix row">

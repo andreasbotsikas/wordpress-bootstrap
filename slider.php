@@ -5,6 +5,8 @@
     jQuery(document).ready(function ($) {
         $('#slideshow').after('<ul class="pagination" id="slideshowNav">').cycle({
             fx: 'scrollLeft',
+            fit: 1,
+            containerResize: 0,
             speed: 'slow',
             easing: 'easeInOutQuad',
             timeout: 5000,
@@ -24,27 +26,24 @@
     <div id="slideshow"  class="row">
 
         <?php for ($i = 1; $i <= 2; $i++) { ?>
-
-        <div class="col-xs-12">
-
+        <div class="col-xs-12 slide slide-<?php echo $i ?>">
+                
             <span class="information">
-
                 <h2><?php if(of_get_option('slider_head'.$i) != NULL){ echo of_get_option('slider_head'.$i);} else echo "&nbsp;" ?></h2>
-
                 <p><?php if(of_get_option('slider_content'.$i) != NULL){ echo of_get_option('slider_content'.$i);} else echo "&nbsp;" ?></p>
-
                 <?php $slider_url = of_get_option('slider_link'.$i); ?>
-
                 <?php if($slider_url<>'') { ?><span class="read-more"><a href="<?php echo of_get_option('slider_link'.$i); ?>"><?php pll_e( 'Read More'); ?></a></span><?php } ?>
-
             </span>
             <!--content end-->
-
-            <?php if($slider_url<>'') { ?><a href="<?php echo of_get_option('slider_link'.$i); ?>"><img width="560" height="380" src="<?php if(of_get_option('slider_image'.$i) != NULL){ echo of_get_option('slider_image'.$i);} else echo get_template_directory_uri() . '/images/slide'.$i.'.png' ?>" alt="" /></a>
-            <?php } else {?>
-            <img width="560" height="380" src="<?php if(of_get_option('slider_image'.$i) != NULL){ echo of_get_option('slider_image'.$i);} else echo get_template_directory_uri() . '/images/slide'.$i.'.png' ?>" alt="" /><?php } ?>
+            <?php if(of_get_option('slider_image'.$i) != NULL){?>
+            <style>
+            .slide-<?php echo $i?> {
+                background-image: url(" <?php echo of_get_option('slider_image'.$i);?>");
+            }
+        </style>
+            <?php } ?>
         </div>
-
+       
         <?php } ?>
 
 

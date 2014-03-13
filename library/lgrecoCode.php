@@ -3,7 +3,7 @@
 // Various string used as pll_e('the key'); or
 // echo pll__('the key');
 // 1st argument is the display name and the next one is the original text
-pll_register_string('Read more', 'Read more');
+pll_register_string('Home Page Slider', 'SliderId');
 
 // Image sizes
 add_image_size( 'lgreco-product', 210, 350, false);
