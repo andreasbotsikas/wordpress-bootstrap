@@ -74,7 +74,8 @@ function wp_bootstrap_theme_support() {
 	register_nav_menus(                      // wp3+ menus
 		array( 
 			'main_nav' => 'The Main Menu',   // main nav in header
-			'footer_links' => 'Footer Links' // secondary nav in footer
+'footer_links' => 'Footer Links', // secondary nav in footer
+'lang_menu' => 'Language menu' // Language options
 		)
 	);	
 }
@@ -99,7 +100,15 @@ function wp_bootstrap_main_nav() {
     	)
     );
 }
-
+function wp_lang_links() { 
+	// display the wp3 menu if available
+    wp_nav_menu(
+    	array(
+    		'menu' => 'lang_menu', /* menu name */
+    		'theme_location' => 'lang_menu' /* where in the theme it's assigned */
+    	)
+	);
+}
 function wp_bootstrap_footer_links() { 
 	// display the wp3 menu if available
     wp_nav_menu(
