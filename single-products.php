@@ -33,8 +33,6 @@
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template('',true); ?>
-					
 					<?php endwhile; ?>			
 					
 					

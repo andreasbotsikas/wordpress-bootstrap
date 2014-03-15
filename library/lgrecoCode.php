@@ -103,4 +103,18 @@ function winetaste( $atts, $content = null ) {
 
 add_shortcode('winetaste', 'winetaste'); 
 
+
+// enqueue javascript
+function lgreco_scripts(){
+    
+    wp_register_script( 'ajaxproducts', 
+      get_template_directory_uri() . '/library/ajaxproducts.js', 
+      array('jquery'), 
+      '1.2' );
+  
+    wp_enqueue_script('ajaxproducts');
+    
+}
+add_action( 'wp_enqueue_scripts', 'lgreco_scripts' );
+
 ?>
