@@ -23,7 +23,7 @@
 		<![endif]-->
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
@@ -64,6 +64,6 @@
 			</div> <!-- end .navbar -->
 		
 		</header> <!-- end header -->
-		
+		<div class="contentContainer">
 <div class="container">
     <div id="content" class="clearfix row">

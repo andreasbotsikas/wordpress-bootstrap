@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row">
-			
 				<div id="main" class="col col-lg-8 clearfix" role="main">
 				
 					<div class="page-header"><h1><span><?php _e("Search Results for","wpbootstrap"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
@@ -45,27 +43,12 @@
 						</nav>
 					<?php } ?>			
 					
-					<?php else : ?>
-					
-					<!-- this area shows up if there are no results -->
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
+        <?php else : 
+            include "notfound.php";
+              endif; ?>
 			
 				</div> <!-- end #main -->
     			
     			<?php get_sidebar(); // sidebar 1 ?>
     
-			</div> <!-- end #content -->
-
 <?php get_footer(); ?>

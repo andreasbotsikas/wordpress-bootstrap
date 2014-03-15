@@ -275,7 +275,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #5f711b;
+  color: #cde3a0;
   text-decoration: underline;
 }
 a:focus {
@@ -338,7 +338,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
 }
@@ -2204,7 +2204,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #5f711b;
+  color: #cde3a0;
   text-decoration: underline;
   background-color: transparent;
 }

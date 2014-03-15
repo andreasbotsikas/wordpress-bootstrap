@@ -20,10 +20,14 @@ Template Name: Product Page
 						
 						</header> <!-- end article header -->
 				    <section class="post_content row">
+				        <?php if ($featured_src){?>
 				        <span class="col-lg-3"><img src="<?php echo $featured_src[0];?>" alt="<?php the_title(); ?>"/></span>
 				        <span class="col-lg-9"><?php the_content(); ?></span>
+				        <?php }else {?>
+                        <span class="col-lg-12"><?php the_content(); ?></span>
+				        <?php } ?>
 				    </section> <!-- end article section -->
-						
+				    <?php include "productsList.php"?>
 						<footer>
 			
 							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
@@ -33,21 +37,9 @@ Template Name: Product Page
 					</article> <!-- end article -->
 					
 					<?php endwhile; ?>	
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
+        <?php else : 
+            include "notfound.php";
+              endif; ?>
 			
 				</div> <!-- end #main -->
     

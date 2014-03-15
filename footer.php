@@ -1,8 +1,10 @@
         </div>
-			<footer role="contentinfo">
+</div> <!-- end #container -->
+</div> <!-- end contentContainer -->
+			<footer role="contentinfo" class="pageFooter">
 			
-				<div id="inner-footer" class="clearfix">
-		          <hr />
+				<div id="inner-footer" class="container clearfix">
+		          <div class="pageHover"><p>&nbsp;</p></div>
 		          <div id="widget-footer" class="clearfix row">
 		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 		            <?php endif; ?>
@@ -24,7 +26,7 @@
 				
 			</footer> <!-- end footer -->
 		
-		</div> <!-- end #container -->
+		
 				
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

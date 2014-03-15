@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row">
-			
 				<div id="main" class="col-sm-8 clearfix" role="main">
 				
 					<div class="page-header"><h1 class="archive_title h2">
@@ -81,6 +79,4 @@
     
 				<?php get_sidebar(); // sidebar 1 ?>
     
-			</div> <!-- end #content -->
-
 <?php get_footer(); ?>

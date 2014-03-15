@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<wpml-config>
+  <custom-types>
+    <!-- Required to add polylang support -->
+    <custom-type translate="1">products</custom-type>
+  </custom-types>
+</wpml-config>
