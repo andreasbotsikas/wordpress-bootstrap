@@ -1,5 +1,6 @@
 <?php
 
+//require_once("debug.php");
 // Various string used as pll_e('the key'); or
 // echo pll__('the key');
 // 1st argument is the display name and the next one is the original text
@@ -37,7 +38,7 @@
 'capability_type' => 'post',
 'hierarchical' => false,
 'query_var' => true,
-'rewrite' => array('slug' => 'products'),
+'rewrite' => array('slug'=>'product'),
 'supports' => array('title','editor','thumbnail')
 ) );
 register_taxonomy_for_object_type( 'category', 'products' );
@@ -45,26 +46,28 @@ add_rewrite_rule('products-el/page/?([0-9]{1,})/?$',
 'index.php?pagename=products-el&paged=$matches[1]','top');
 add_rewrite_rule('products/page/?([0-9]{1,})/?$',
 'index.php?pagename=products&paged=$matches[1]','top');
-add_rewrite_rule('products-el/([^/]+)/?$',
-    'index.php?products=$matches[1]','top');
+//add_rewrite_rule('products-el/([^/]+)/?$',
+//'index.php?products=$matches[1]','top');
+//add_rewrite_rule('products/(wines|pastas|olive-oil)/?$',
+//    'index.php?pagename=$matches[1]','top');
 flush_rewrite_rules() ;
 }
    
 add_action( 'init', 'register_products_type' );
 
-function productsLanguage($url, $post) {
-    global $polylang;
-    if ( $post->post_type == 'products'){
-        // Get language of a post
-        $postLang = $polylang->get_post_language($post->ID)->slug;
-        if ($postLang!='en') {
-            return str_replace('lgreco.eu/products','lgreco.eu/products-' . $postLang,$url);
-        }
-    }
-    return $url;
-}
+//function productsLanguage($url, $post) {
+//    global $polylang;
+//    if ( $post->post_type == 'products'){
+//        // Get language of a post
+//        $postLang = $polylang->get_post_language($post->ID)->slug;
+//        if ($postLang!='en') {
+//            return str_replace('lgreco.eu/product','lgreco.eu/products-' . $postLang,$url);
+//        }
+//    }
+//    return $url;
+//}
 
-add_filter('post_type_link', 'productsLanguage', 10, 2);
+//add_filter('post_type_link', 'productsLanguage', 10, 2);
 
 // http://premium.wpmudev.org/blog/easy-guide-to-displaying-custom-post-types-in-your-wordpress-theme/
 // Don't forget to add the wpml-config to enable translation for custom type

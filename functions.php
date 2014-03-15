@@ -16,9 +16,23 @@ require_once('library/shortcodes.php');
 
 require_once('library/lgrecoCode.php'); // custom shortcodes
 
-//require_once('debug.php');      
+//require_once('library/debug.php');      
 // Admin Functions (commented out by default)
 // require_once('library/admin.php');         // custom admin functions
+function wp_bootstrap_login_css() {
+	/* i couldn't get wp_enqueue_style to work :( */
+	echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/library/less/wp-login.css">';
+}
+// changing the logo link from wordpress.org to your site 
+function wp_bootstrap_login_url() { return 'http://lgreco.eu'; }
+
+// changing the alt text on the logo to show your site name 
+function wp_bootstrap_login_title() { return 'ËGreco'; }
+
+// calling it only on the login page
+add_action('login_head', 'wp_bootstrap_login_css');
+add_filter('login_headerurl', 'wp_bootstrap_login_url');
+add_filter('login_headertitle', 'wp_bootstrap_login_title');
 
 // Custom Backend Footer
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
@@ -473,7 +487,7 @@ if( !function_exists( "theme_js" ) ) {
       '1.2' );
   
     wp_register_script( 'wpbs-scripts', 
-      get_template_directory_uri() . '/library/js/scripts.js', 
+      get_template_directory_uri() . '/library/js/scripts-ck.js', 
       array('jquery'), 
       '1.2' );
   

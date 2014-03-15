@@ -9,12 +9,6 @@ Developed by: Eddie Machado
 URL: http://themble.com/bones/
 */
 
-// Adding Translation Option
-load_theme_textdomain( 'wpbootstrap', TEMPLATEPATH.'/languages' );
-$locale = get_locale();
-$locale_file = TEMPLATEPATH."/languages/$locale.php";
-if ( is_readable($locale_file) ) require_once($locale_file);
-
 // Cleaning up the Wordpress Head
 function wp_bootstrap_head_cleanup() {
 	// remove header links

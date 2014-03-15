@@ -259,6 +259,14 @@ strong {
 .contactform .page-header {
   font-size: larger;
 }
+.productslist .page-header {
+  margin: 0;
+}
+.productslist .product {
+  /*border: 1px solid @gray-dark;
+        -webkit-box-shadow:  0 1px 4px @gray-light;
+        box-shadow:  0 1px 4px @gray-light;*/
+}
 .productslist .product img {
   float: left;
   margin-right: 5px;
