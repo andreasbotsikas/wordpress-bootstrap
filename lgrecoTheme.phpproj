@@ -22,6 +22,7 @@
     <Compile Include="attachment.php" />
     <Compile Include="author.php" />
     <Compile Include="comments.php" />
+    <Compile Include="library\debug.php" />
     <Compile Include="footer.php" />
     <Compile Include="functions.php" />
     <Compile Include="header.php" />
@@ -31,6 +32,7 @@
     <Compile Include="library\bones.php" />
     <Compile Include="library\lgrecoCode.php" />
     <Compile Include="library\shortcodes.php" />
+    <Compile Include="notfound.php" />
     <Compile Include="options.php" />
     <Compile Include="page-no-head.php" />
     <Compile Include="page-product.php" />
@@ -39,23 +41,20 @@
     <Compile Include="page-left-sidebar.php" />
     <Compile Include="page-underconstruction.php" />
     <Compile Include="page.php" />
+    <Compile Include="productsList.php" />
     <Compile Include="search.php" />
     <Compile Include="searchform.php" />
     <Compile Include="sidebar-sidebar2.php" />
     <Compile Include="sidebar.php" />
+    <Compile Include="single-products.php" />
     <Compile Include="single.php" />
     <Compile Include="slider.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
     <Folder Include="images\wines\" />
-    <Folder Include="languages\" />
     <Folder Include="library\" />
-    <Folder Include="library\css\" />
-    <Folder Include="library\fonts\" />
-    <Folder Include="library\img\" />
     <Folder Include="library\js\" />
-    <Folder Include="library\js\libs\" />
     <Folder Include="library\less\" />
     <Folder Include="slider\" />
   </ItemGroup>
@@ -71,30 +70,12 @@
     <Content Include="images\wines\aromas.png" />
     <Content Include="images\wines\color.png" />
     <Content Include="images\wines\taste.png" />
-    <Content Include="languages\default.pot" />
-    <Content Include="languages\de_DE.mo" />
-    <Content Include="languages\de_DE.po" />
-    <Content Include="languages\es_ES.mo" />
-    <Content Include="languages\es_ES.po" />
-    <Content Include="languages\fr_FR.mo" />
-    <Content Include="languages\fr_FR.po" />
-    <Content Include="languages\nl_NL.mo" />
-    <Content Include="languages\nl_NL.po" />
-    <Content Include="languages\pt_BR.mo" />
-    <Content Include="languages\pt_BR.po" />
-    <Content Include="languages\pt_PT" />
-    <Content Include="languages\Readme.txt" />
-    <Content Include="library\css\bootstrap.css" />
-    <Content Include="library\css\login.css" />
-    <Content Include="library\css\normalize.css" />
-    <Content Include="library\css\theme.css" />
-    <Content Include="library\fonts\glyphiconshalflings-regular.eot" />
-    <Content Include="library\fonts\glyphiconshalflings-regular.otf" />
-    <Content Include="library\fonts\glyphiconshalflings-regular.svg" />
-    <Content Include="library\fonts\glyphiconshalflings-regular.ttf" />
-    <Content Include="library\fonts\glyphiconshalflings-regular.woff" />
-    <Content Include="library\img\glyphicons-halflings-white.png" />
-    <Content Include="library\img\glyphicons-halflings.png" />
+    <Content Include="library\ajaxproducts.js" />
+    <Content Include="library\centeredLogo.png" />
+    <Content Include="library\dot.gif" />
+    <Content Include="library\dottedbg.gif" />
+    <Content Include="library\dottedbg.jpg" />
+    <Content Include="library\footer_repeat.jpg" />
     <Content Include="library\js\affix.js" />
     <Content Include="library\js\alert.js" />
     <Content Include="library\js\bootstrap-ck.js" />
@@ -105,8 +86,6 @@
     <Content Include="library\js\carousel.js" />
     <Content Include="library\js\collapse.js" />
     <Content Include="library\js\dropdown.js" />
-    <Content Include="library\js\libs\jquery-1.7.1.min.js" />
-    <Content Include="library\js\libs\selectivizr-min.js" />
     <Content Include="library\js\modal.js" />
     <Content Include="library\js\modernizr.full.min.js" />
     <Content Include="library\js\popover.js" />
@@ -118,6 +97,7 @@
     <Content Include="library\js\transition.js" />
     <Content Include="library\less\alerts.less" />
     <Content Include="library\less\badges.less" />
+    <Content Include="library\less\bootstrap.css" />
     <Content Include="library\less\bootstrap.less" />
     <Content Include="library\less\breadcrumbs.less" />
     <Content Include="library\less\button-groups.less" />
@@ -156,9 +136,10 @@
     <Content Include="library\less\utilities.less" />
     <Content Include="library\less\variables.less" />
     <Content Include="library\less\wells.less" />
+    <Content Include="library\less\wp-login.less" />
     <Content Include="library\less\wp.less" />
     <Content Include="library\lgreco.less" />
-    <Content Include="library\log.txt" />
+    <Content Include="library\menulogo.png" />
     <Content Include="logo.png" />
     <Content Include="page-underconstruction.css" />
     <Content Include="README.md" />
@@ -166,5 +147,6 @@
     <Content Include="slider\jquery.cycle.all.js" />
     <Content Include="slider\jquery.easing.1.3.js" />
     <Content Include="style.css" />
+    <Content Include="wpml-config.xml" />
   </ItemGroup>
 </Project>

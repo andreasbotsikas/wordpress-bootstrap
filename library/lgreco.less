@@ -1,5 +1,6 @@
 ﻿
 @pageBg: #fafafa;
+@min-width: 320px;
 
 @import "./less/variables.less";
 
@@ -62,7 +63,7 @@
 .navbar > .container {
     padding-left: 20px;
     padding-right: 20px;
-    min-width: 450px;
+    min-width: @min-width;
     background-image: url('../images/menubg.jpg');
     background-repeat: repeat-x;
     background-color: #000;
@@ -86,7 +87,7 @@
 
 body {
     background: url(./dottedbg.gif) repeat; /*background-color:@green-light;*/
-    min-width: 450px;
+    min-width: @min-width;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }

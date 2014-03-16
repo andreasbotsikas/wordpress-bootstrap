@@ -32,8 +32,17 @@
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
   			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 		<![endif]-->
-		
-		<?php wp_footer(); // js scripts are inserted using this function ?>
+        <!-- media-queries.js (fallback) -->
+        <!--[if lt IE 9]>
+			 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+		<![endif]-->
+
+        <!-- html5.js -->
+        <!--[if lt IE 9]>
+			  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->		
+        <?php wp_footer(); // js scripts are inserted using this function ?>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
 
 	</body>
 

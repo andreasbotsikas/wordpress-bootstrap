@@ -11,23 +11,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	    <title><?php wp_title( ' ', true, 'right' ); ?></title>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				
-		<!-- media-queries.js (fallback) -->
-		<!--[if lt IE 9]>
-			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
-		<![endif]-->
-
-		<!-- html5.js -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		
-  		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
+	    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-				
 	</head>
 	
 	<body <?php body_class(); ?>>
