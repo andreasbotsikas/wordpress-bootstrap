@@ -4,15 +4,17 @@
 			<footer role="contentinfo" class="pageFooter">
 			
 				<div id="inner-footer" class="container clearfix">
-		          <div class="pageHover"><p>&nbsp;</p></div>
-		          <div id="widget-footer" class="clearfix row">
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
-		            <?php endif; ?>
-		          </div>
+				    <div class="pageHover"><p>&nbsp;</p></div>
+				    <?php /* 
+                    <div id="widget-footer" class="clearfix row">
+				        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
+				        <?php endif; ?>
+				        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
+				        <?php endif; ?>
+				        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
+				        <?php endif; ?>
+				    </div>
+                           */ ?>
 					
 					<nav class="clearfix">
 						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>

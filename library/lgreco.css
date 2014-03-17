@@ -72,6 +72,7 @@
   border-bottom: none;
   background: url(dot.gif) bottom repeat-x;
   background-position-x: 0;
+  margin-top: 20px;
 }
 body {
   background: url(dottedbg.gif) repeat;
@@ -165,7 +166,8 @@ label {
 #menu-nav_main_el > li:focus {
   border-bottom: 4px solid #92af2a;
 }
-strong {
+strong,
+a {
   font-weight: 600;
 }
 .navbar-collapse.in #menu-nav_main > li:hover,
@@ -183,19 +185,17 @@ strong {
 .navbar-toggle.collapsed .icon-bar {
   background-color: #92af2a;
 }
-.menu-nav_lang-container {
+#menu-nav_lang {
   float: right;
-}
-.menu-nav_lang-container #menu-nav_lang {
   list-style: none;
   margin: 0;
   padding: 0;
   padding-bottom: 15px;
 }
-.menu-nav_lang-container #menu-nav_lang li {
+#menu-nav_lang li {
   /*float:right;*/
 }
-.menu-nav_lang-container #menu-nav_lang li.current-lang {
+#menu-nav_lang li.current-lang {
   visibility: hidden;
   display: none;
 }
@@ -256,22 +256,120 @@ strong {
 .gmpInfoWindowContent {
   font-size: 10px !important;
 }
-.contactform .page-header {
-  font-size: larger;
-}
-.productslist .page-header {
+/*.contactform {
+    .page-header {
+        font-size: larger;
+    }
+}*/
+#main .productslist .page-header {
   margin: 0;
 }
-.productslist .product {
+#main .productslist .product {
   /*border: 1px solid @gray-dark;
         -webkit-box-shadow:  0 1px 4px @gray-light;
         box-shadow:  0 1px 4px @gray-light;*/
 }
-.productslist .product img {
+#main .productslist .product img {
   float: left;
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
-.products .post_content > img {
-  float: left;
-  margin-right: 15px;
+#main .productslist .product img.wp-post-image {
+  -webkit-box-shadow: 0 3px 5px;
+  box-shadow: 0 3px 5px;
+}
+.wineproperty .propertyImage {
+  background-repeat: no-repeat;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+}
+.wineproperty.color .propertyImage {
+  background-image: url(../images/wines/color.png);
+}
+.wineproperty.aromas .propertyImage {
+  background-image: url(../images/wines/aromas.png);
+}
+.wineproperty.taste .propertyImage {
+  background-image: url(../images/wines/taste.png);
+}
+.products .post_content .wp-post-image {
+  -webkit-box-shadow: 0 5px 10px;
+  box-shadow: 0 5px 10px;
+  margin-bottom: 10px;
+}
+.widget .menu,
+.widget .sub-menu {
+  list-style: none;
+  padding: 0;
+}
+.widget .sub-menu {
+  padding-left: 15px;
+  margin-left: 15px;
+  background: url(dot.gif) left repeat-y;
+}
+.widget .menu-item > a {
+  display: block;
+  padding-bottom: 5px;
+  /*padding-top: 5px;*/
+}
+.widget .menu > .menu-item > a {
+  background: url(dot.gif) bottom repeat-x;
+  padding-bottom: 10px;
+}
+h1,
+h2,
+h3 {
+  margin-top: 5px;
+  font-size: 22px;
+}
+.widget_search {
+  margin-bottom: 3px;
+  margin-top: 0px;
+  padding-right: 0px;
+}
+.widget_search form {
+  margin-bottom: 0;
+}
+.widget_search .input-group .form-control {
+  border-radius: 4px;
+}
+#post-not-found .input-group .form-control {
+  border-radius: 4px;
+}
+#post-not-found .error-image {
+  padding-top: 30px;
+  margin: 0 auto;
+  display: block;
+}
+.searchbg {
+  background-image: url(search.png);
+  -moz-background-size: 20px 20px;
+  -o-background-size: 20px 20px;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 32px;
+  background-color: transparent;
+  padding: 5px 20px;
+  background-position-x: 10px;
+  background-position-y: 5px;
+  background-repeat: no-repeat;
+}
+.searchbg:active,
+.searchbg:focus,
+.searchbg:hover {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-image: url(search_hover.png);
+}
+.searchbg:active {
+  -moz-background-size: 15px 15px;
+  -o-background-size: 15px 15px;
+  -webkit-background-size: 15px 15px;
+  background-size: 15px 15px;
+  background-position-y: 8px;
 }

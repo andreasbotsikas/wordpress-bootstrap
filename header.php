@@ -1,4 +1,4 @@
-<!doctype html>  
+﻿<!doctype html>  
 
 <!--[if IEMobile 7 ]> <html <?php language_attributes(); ?>class="no-js iem7"> <![endif]-->
 <!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="no-js ie6"> <![endif]-->
@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	    <title><?php wp_title( ' ', true, 'right' ); ?></title>	
+	    <title><?php wp_title( ' ', true, 'right' ); ?> | ΛGreco</title>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<!-- wordpress head functions -->
@@ -37,14 +37,6 @@
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
 						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 					    <?php wp_lang_links(); // Add language menu ?>
-						<?php /* if(of_get_option('search_bar', '1')) {?>
-						<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-							<div class="form-group">
-								<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-							</div>
-                            <button type="submit" class="btn btn-default"><?php _e('Search','wpbootstrap'); ?></button>
-						</form>
-						<?php } */ ?>
 					</div>
 
 				</div> <!-- end .container -->

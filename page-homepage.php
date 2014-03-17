@@ -13,26 +13,20 @@ Template Name: Homepage
         <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
             <header>
-
-                <?php 
-								$post_thumbnail_id = get_post_thumbnail_id();
-								$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
-							?>
-
-                <div class="jumbotron" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-repeat: no-repeat; background-position: 0 0;">
-
                     <div class="page-header">
                         <h1><?php bloginfo('title'); ?><small><?php echo get_post_meta($post->ID, 'custom_tagline' , true);?></small></h1>
                     </div>
-
-                </div>
-
             </header>
 
             <section class="row post_content">
 
                 <div class="col-sm-8">
-
+                    <?php 
+                    $post_thumbnail_id = get_post_thumbnail_id();
+                    $featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
+                     if ($featured_src[0]!=null){?>
+                        <img src="<?php echo $featured_src[0]?>" alt="<?php bloginfo('title'); ?>"/>
+                    <?php }?>
                     <?php the_content(); ?>
 
                 </div>

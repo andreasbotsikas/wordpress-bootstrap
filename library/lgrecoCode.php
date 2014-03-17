@@ -10,6 +10,11 @@
    pll_register_string('Pager next', 'Next &rarr;');
    pll_register_string('Pager last', 'Last');
    pll_register_string('Search', 'Search');
+   pll_register_string('Search result for', 'Search results for');
+   pll_register_string('Search result categories', 'In categories');
+   pll_register_string('Products more', 'Read more...');
+  pll_register_string('404 Header', 'Not found (404)');
+  pll_register_string('404 Sorry text', 'Unfortunately the page you are looking for is not located. Please use the search field to search for the content you want or select from the product categories to browse our products.');
 
 // Image sizes
    add_image_size( 'lgreco-product', 210, 350, false);
@@ -34,6 +39,7 @@
 'labels' => $productlabels,
 'description' => 'Ëgreco products',
 'public' => true,
+'menu_icon' => 'dashicons-cart',
 'show_ui' => true,
 'capability_type' => 'post',
 'hierarchical' => false,
@@ -42,14 +48,15 @@
 'supports' => array('title','editor','thumbnail')
 ) );
 register_taxonomy_for_object_type( 'category', 'products' );
-add_rewrite_rule('products-el/page/?([0-9]{1,})/?$',
-'index.php?pagename=products-el&paged=$matches[1]','top');
-add_rewrite_rule('products/page/?([0-9]{1,})/?$',
-'index.php?pagename=products&paged=$matches[1]','top');
-//add_rewrite_rule('products-el/([^/]+)/?$',
-//'index.php?products=$matches[1]','top');
-//add_rewrite_rule('products/(wines|pastas|olive-oil)/?$',
-//    'index.php?pagename=$matches[1]','top');
+add_rewrite_rule('products-el/page/?([0-9]{1,})/?$','index.php?pagename=products-el&paged=$matches[1]','top');
+add_rewrite_rule('products/page/?([0-9]{1,})/?$','index.php?pagename=products&paged=$matches[1]','top');
+add_rewrite_rule('category/([^/]+)/?$','index.php?pagename=$matches[1]','top');
+add_rewrite_rule('category/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]','top');
+add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]','top');
+add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]/$matches[4]','top');
+add_rewrite_rule('category/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]&paged=$matches[2]','top');
+add_rewrite_rule('category/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]/$matches[2]&paged=$matches[3]','top');
+add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]&paged=$matches[3]','top');
 flush_rewrite_rules() ;
 }
    
@@ -79,8 +86,8 @@ add_action( 'init', 'register_products_type' );
 
  function getwinediv($type, $content){
     $output = '<div class="wineproperty ' . $type . ' row">';
-    $output .= '<span class="col-xs-2"><img src="' . get_template_directory_uri() . '/images/wines/' . $type . '.png"/></span>';
-    $output .= '<span class="col-xs-10">' . $content . '</p>';
+    $output .= '<div class="col-xs-2 propertyImage">&nbsp;</div>';
+    $output .= '<div class="col-xs-10">' . $content . '</div>';
     $output .= '</div>';
     return $output;
 }
@@ -107,14 +114,32 @@ add_shortcode('winetaste', 'winetaste');
 // enqueue javascript
 function lgreco_scripts(){
     
-    wp_register_script( 'ajaxproducts', 
-      get_template_directory_uri() . '/library/ajaxproducts.js', 
+    wp_register_script( 'lgrecoscripts', 
+      get_template_directory_uri() . '/library/lgrecoscripts.js', 
       array('jquery'), 
       '1.2' );
   
-    wp_enqueue_script('ajaxproducts');
+    wp_enqueue_script('lgrecoscripts');
     
 }
 add_action( 'wp_enqueue_scripts', 'lgreco_scripts' );
+
+
+function remove_footer_admin () {
+    echo '<span id="footer-thankyou">Customization by <a href="http://thinkit.gr" target="_blank">Think IT</a></span>.&nbsp;';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+//add_action('admin_head', 'updateStyles');
+//// Check icons at http://melchoyce.github.io/dashicons/
+//function updateStyles() {
+//    echo '<style>
+//    body, td, textarea, input, select {
+//      font-family: "Lucida Grande";
+//      font-size: 12px;
+//    } 
+//  </style>';
+//}
+
 
 ?>

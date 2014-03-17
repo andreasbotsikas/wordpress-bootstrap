@@ -82,6 +82,7 @@
     border-bottom: none;
     background: url(./dot.gif) bottom repeat-x;
     background-position-x: 0;
+    margin-top: 20px;
 }
 
 
@@ -177,7 +178,7 @@ label{
         }*/
     }
 }
-strong {
+strong, a {
     font-weight: 600;
 }
 .navbar-collapse.in {
@@ -207,21 +208,18 @@ strong {
     }
 }
 
-.menu-nav_lang-container {
+#menu-nav_lang {
     float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
 
-    #menu-nav_lang {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        padding-bottom: 15px;
-
-        li {
-            /*float:right;*/
-            &.current-lang {
-                visibility: hidden;
-                display: none;
-            }
+    li {
+        /*float:right;*/
+        &.current-lang {
+            visibility: hidden;
+            display: none;
         }
     }
 }
@@ -290,30 +288,146 @@ strong {
     font-size: 10px !important;
 }
 
-.contactform {
+/*.contactform {
     .page-header {
         font-size: larger;
     }
-}
+}*/
+#main {
+    .productslist {
+        .page-header {
+            margin: 0;
+        }
 
-.productslist{
-    .page-header{
-        margin: 0;
-    }
-    .product{
-        /*border: 1px solid @gray-dark;
+        .product {
+            /*border: 1px solid @gray-dark;
         -webkit-box-shadow:  0 1px 4px @gray-light;
         box-shadow:  0 1px 4px @gray-light;*/
-        img{
-            float:  left;
-            margin-right: 5px;
+            img {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 5px;
+                &.wp-post-image {
+                    -webkit-box-shadow: 0 3px 5px;
+                    box-shadow: 0 3px 5px;
+                }
+            }
         }
     }
 }
 
+.wineproperty {
+    .propertyImage {
+        background-repeat: no-repeat;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-position:center center;
+    }
+
+    &.color {
+        .propertyImage {
+            background-image: url(../images/wines/color.png);
+        }
+    }
+
+    &.aromas {
+        .propertyImage {
+            background-image: url(../images/wines/aromas.png);
+        }
+    }
+
+    &.taste {
+        .propertyImage {
+            background-image: url(../images/wines/taste.png);
+        }
+    }
+}
+
+
 .products {
-    .post_content > img{
-        float:  left;
-        margin-right: 15px;
+    .post_content {
+        .wp-post-image {
+            -webkit-box-shadow: 0 5px 10px;
+            box-shadow: 0 5px 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.widget{
+    .menu, .sub-menu{
+        list-style: none;
+        padding:0;
+    }
+    .sub-menu{
+        padding-left: 15px;
+        margin-left: 15px;
+        background: url(./dot.gif) left repeat-y;
+    }
+    .menu-item > a{
+        display:block;
+        padding-bottom: 5px;
+        /*padding-top: 5px;*/
+    }
+    .menu > .menu-item > a{
+        background: url(./dot.gif) bottom repeat-x;
+        padding-bottom: 10px;
+    }
+}
+
+h1,h2,h3{
+    margin-top: 5px;
+    font-size: 22px;
+}
+.widget_search{
+    margin-bottom: 3px;
+    margin-top: 0px;
+    padding-right: 0px;
+    form{
+        margin-bottom: 0;
+    }
+    .input-group .form-control{
+        border-radius:@border-radius-base;
+    }
+}
+#post-not-found{
+    .input-group .form-control{
+        border-radius:@border-radius-base;
+    }
+    .error-image{
+        padding-top: 30px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.searchbg {
+    background-image: url(search.png);
+    -moz-background-size: 20px 20px;
+    -o-background-size: 20px 20px;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 32px;
+    background-color: transparent;
+    padding: 5px 20px;
+    background-position-x: 10px;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+
+    &:active, &:focus, &:hover {
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-image: url(search_hover.png);
+    }
+
+    &:active {
+        -moz-background-size: 15px 15px;
+        -o-background-size: 15px 15px;
+        -webkit-background-size: 15px 15px;
+        background-size: 15px 15px;
+        background-position-y: 8px;
     }
 }
