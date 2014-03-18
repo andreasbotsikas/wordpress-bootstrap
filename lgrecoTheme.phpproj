@@ -55,8 +55,10 @@
     <Folder Include="images\" />
     <Folder Include="images\wines\" />
     <Folder Include="library\" />
+    <Folder Include="library\img\" />
     <Folder Include="library\js\" />
     <Folder Include="library\less\" />
+    <Folder Include="library\lightbox\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="apple-touch-icon.png" />
@@ -70,6 +72,11 @@
     <Content Include="images\wines\aromas.png" />
     <Content Include="images\wines\color.png" />
     <Content Include="images\wines\taste.png" />
+    <Content Include="library\img\close.png" />
+    <Content Include="library\img\loading.gif" />
+    <Content Include="library\img\next.png" />
+    <Content Include="library\img\prev.png" />
+    <Content Include="library\img\zoom_icon.png" />
     <Content Include="library\lgrecoscripts.js" />
     <Content Include="library\centeredLogo.png" />
     <Content Include="library\dot.gif" />
@@ -139,6 +146,9 @@
     <Content Include="library\less\wp-login.less" />
     <Content Include="library\less\wp.less" />
     <Content Include="library\lgreco.less" />
+    <Content Include="library\lightbox\lightbox-2.6.js" />
+    <Content Include="library\lightbox\lightbox.css" />
+    <Content Include="library\lightbox\screen.css" />
     <Content Include="library\menulogo.png" />
     <Content Include="logo.png" />
     <Content Include="page-underconstruction.css" />

@@ -49,14 +49,16 @@
 ) );
 register_taxonomy_for_object_type( 'category', 'products' );
 add_rewrite_rule('products-el/page/?([0-9]{1,})/?$','index.php?pagename=products-el&paged=$matches[1]','top');
+add_rewrite_rule('products-el/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]&paged=$matches[2]','top');
+add_rewrite_rule('products-el/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[2]&paged=$matches[3]','top');
 add_rewrite_rule('products/page/?([0-9]{1,})/?$','index.php?pagename=products&paged=$matches[1]','top');
-add_rewrite_rule('category/([^/]+)/?$','index.php?pagename=$matches[1]','top');
-add_rewrite_rule('category/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]','top');
-add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]','top');
-add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]/$matches[4]','top');
-add_rewrite_rule('category/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]&paged=$matches[2]','top');
-add_rewrite_rule('category/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]/$matches[2]&paged=$matches[3]','top');
-add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]&paged=$matches[3]','top');
+//add_rewrite_rule('category/([^/]+)/?$','index.php?pagename=$matches[1]','top');
+//add_rewrite_rule('category/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]','top');
+//add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]','top');
+//add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$','index.php?pagename=$matches[1]/$matches[2]/$matches[3]/$matches[4]','top');
+//add_rewrite_rule('category/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[1]&paged=$matches[2]','top');
+//add_rewrite_rule('category/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[2]&paged=$matches[3]','top');
+//add_rewrite_rule('category/([^/]+)/([^/]+)/([^/]+)/page/?([0-9]{1,})/?$','index.php?pagename=$matches[3]&paged=$matches[4]','top');
 flush_rewrite_rules() ;
 }
    
@@ -117,12 +119,31 @@ function lgreco_scripts(){
     wp_register_script( 'lgrecoscripts', 
       get_template_directory_uri() . '/library/lgrecoscripts.js', 
       array('jquery'), 
-      '1.2' );
-  
+'1.2' );
+    
+    wp_register_script( 'lightbox', 
+     get_template_directory_uri() . '/library/lightbox/lightbox-2.6.js', 
+     array('jquery'), 
+'1.2' );
+    
+    wp_register_style( 'lightbox', get_template_directory_uri() . '/library/lightbox/lightbox.css', array(), '2.6', 'all' );
+    wp_enqueue_style( 'lightbox' );
+    
+wp_enqueue_script('lightbox');    
     wp_enqueue_script('lgrecoscripts');
     
 }
 add_action( 'wp_enqueue_scripts', 'lgreco_scripts' );
+
+add_filter( 'post_thumbnail_html', 'my_lightbox_image_html', 10, 3 );
+
+function my_lightbox_image_html( $html, $post_id, $post_image_id ) {
+    if  (!empty($html)){
+        $html = '<a href="' . wp_get_attachment_image_src( $post_image_id, 'full' )[0] . '" data-lightbox="postImage" title="' . esc_attr( get_the_title( $post_id ) ) . '" class="zoomImage">' . $html . '</a>';
+    }
+    return $html;
+
+}
 
 
 function remove_footer_admin () {
