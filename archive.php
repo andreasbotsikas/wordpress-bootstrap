@@ -81,8 +81,6 @@
 					    <section class="post_content">
 					    	<p><?php _e("Sorry, What you were looking for is not here.", "wpbootstrap"); ?></p>
 					    </section>
-					    <footer>
-					    </footer>
 					</article>
 					
 					<?php endif; ?>

@@ -10,18 +10,32 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	    <title><?php wp_title( ' ', true, 'right' ); ?> | ΛGreco</title>	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @-webkit-viewport { width: device-width; }
+            @-moz-viewport { width: device-width; }
+            @-ms-viewport { width: device-width; }
+            @-o-viewport { width: device-width; }
+            @viewport { width: device-width; }
+        </style>
+        <script>    
+            // Important for windows phone 8
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        </script>
 	    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		<!-- wordpress head functions -->
-		<?php wp_head(); ?>
-		<!-- end of wordpress head -->
+	    <?php wp_head(); ?>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
 	</head>
 	
 	<body <?php body_class(); ?>>
 				
 		<header role="banner">
 				
-			<div class="navbar navbar-fixed-top">
+			<div class="navbar navbar-fixed-top" role="navigation">
 				<div class="container drop-shadow lifted"><!-- main-menu -->
           
 					<div class="navbar-header">

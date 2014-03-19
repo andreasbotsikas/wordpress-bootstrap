@@ -1,8 +1,8 @@
 <section id="products-list">
-    <div id="products-list-content">
-    <div class="productslist row">
-        <?php 
-        $newQueryArgs = array ('post_type' => 'products', 'paged' => $paged,  'orderby' => 'title');
+    <?php 
+        mb_internal_encoding('UTF-8');
+        $categoryTitle = mb_strtolower(get_the_title());
+    $newQueryArgs = array ('post_type' => 'products', 'paged' => $paged,  'orderby' => 'title');
         $specificCategory = get_post_meta(get_the_ID(), 'product_category', true);
         if (! empty($specificCategory)) { 
             $newQueryArgs =  array_merge($newQueryArgs, array('category_name'=> $specificCategory));
@@ -12,8 +12,14 @@
         $wp_query = new WP_Query(); 
         $wp_query->query($newQueryArgs);
         remove_action( 'the_content', array('ShareaholicPublic', 'draw_canvases'));
-        $pInRow = 0;
-        while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+        $pInRow = 0;?>
+    <div id="products-list-content">
+        <header>
+            <div class="page-header row"><h2 class="col-sm-<?php echo has_pager()?'4':'12';?>"><p><?php pll_e('Category products') ?> <?php  echo $categoryTitle;?></p></h2><?php if (has_pager()) {?><div class="col-sm-8 productslistpagertop"><?php page_navi(); ?></div><?php } ?></div>
+		</header>
+    <div class="productslist row">
+      
+      <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
         <?php if ($pInRow==0){?>
         <div class="productRow row">
         <?php } ?>

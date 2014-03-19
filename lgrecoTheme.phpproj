@@ -50,6 +50,7 @@
     <Compile Include="sidebar.php" />
     <Compile Include="single-products.php" />
     <Compile Include="single.php" />
+    <Compile Include="subCategories.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
@@ -73,6 +74,7 @@
     <Content Include="images\wines\color.png" />
     <Content Include="images\wines\taste.png" />
     <Content Include="library\img\close.png" />
+    <Content Include="library\img\home_search_bg.png" />
     <Content Include="library\img\loading.gif" />
     <Content Include="library\img\next.png" />
     <Content Include="library\img\prev.png" />

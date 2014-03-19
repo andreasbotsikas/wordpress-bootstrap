@@ -1,60 +1,52 @@
 <?php
 /*
 Template Name: Homepage
-*/
+ */
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
+      $contentLength = 12;
+      if (has_post_thumbnail()) $contentLength-=3;
+      if (is_active_sidebar('sidebar2')) $contentLength-=3;
+?>
 <?php echo do_shortcode("[metaslider id=" .  pll__('SliderId') . "]"); ?>
-    <div id="main" class="col-sm-12 clearfix" role="main">
+<div id="searchhome"><?php get_search_form(); ?></div>
+<div id="main" class="col-sm-12 clearfix" role="main">
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php if (have_posts()) :
+              while (have_posts()) :
+                  the_post(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+        <header>
+            <div class="page-header">
+                <h1><?php the_title()?></h1>
+            </div>
+        </header>
 
-            <header>
-                    <div class="page-header">
-                        <h1><?php bloginfo('title'); ?><small><?php echo get_post_meta($post->ID, 'custom_tagline' , true);?></small></h1>
-                    </div>
-            </header>
+        <section class="row post_content">
+            <?php if (has_post_thumbnail()){?>
+            <span class="col-sm-3"><?php the_post_thumbnail( 'lgreco-homepage' );?></span>
+            <?php }?>
+            <span class="col-sm-<?php echo $contentLength; ?>"><?php the_content(); ?></span>
+            <?php if (is_active_sidebar('sidebar2')){?>
+            <span class="col-sm-3" role="complementary"><?php dynamic_sidebar( 'sidebar2' ); ?></span>
+            <?php } ?>
+        </section>
+        <!-- end article header -->
+    </article>
+    <!-- end article -->
+     <?php include "subCategories.php";?>
+    <?php endwhile; ?>
 
-            <section class="row post_content">
+    <?php else : 
+              include "notfound.php";
+          endif; ?>
 
-                <div class="col-sm-8">
-                    <?php 
-                    $post_thumbnail_id = get_post_thumbnail_id();
-                    $featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
-                     if ($featured_src[0]!=null){?>
-                        <img src="<?php echo $featured_src[0]?>" alt="<?php bloginfo('title'); ?>"/>
-                    <?php }?>
-                    <?php the_content(); ?>
+</div>
+<!-- end #main -->
 
-                </div>
-
-                <?php get_sidebar('sidebar2'); // sidebar 2 ?>
-
-            </section>
-            <!-- end article header -->
-
-            <footer>
-                <p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-
-            </footer>
-            <!-- end article footer -->
-
-        </article>
-        <!-- end article -->
-
-        <?php endwhile; ?>
-
-        <?php else : 
-            include "notfound.php";
-              endif; ?>
-
-    </div>
-    <!-- end #main -->
-
-    <?php //get_sidebar(); // sidebar 1 ?>
+<?php //get_sidebar(); // sidebar 1 ?>
 
 
 <?php get_footer(); ?>

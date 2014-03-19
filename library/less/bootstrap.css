@@ -647,7 +647,7 @@ address {
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -3110,8 +3110,42 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .label-danger[href]:focus {
   background-color: #c9302c;
 }
-/*@import "badges.less";
-@import "jumbotron.less";
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #999999;
+  border-radius: 10px;
+}
+.badge:empty {
+  display: none;
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+a.badge:hover,
+a.badge:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #92af2a;
+  background-color: #ffffff;
+}
+.nav-pills > li > a > .badge {
+  margin-left: 3px;
+}
+/*@import "jumbotron.less";
 @import "thumbnails.less";
 @import "alerts.less";
 @import "progress-bars.less";*/

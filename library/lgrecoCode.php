@@ -13,12 +13,15 @@
    pll_register_string('Search result for', 'Search results for');
    pll_register_string('Search result categories', 'In categories');
    pll_register_string('Products more', 'Read more...');
+   pll_register_string('Products in category', 'Category products');
   pll_register_string('404 Header', 'Not found (404)');
   pll_register_string('404 Sorry text', 'Unfortunately the page you are looking for is not located. Please use the search field to search for the content you want or select from the product categories to browse our products.');
 
 // Image sizes
    add_image_size( 'lgreco-product', 210, 350, false);
    add_image_size( 'lgreco-product-list-item', 100, 150, false);
+  add_image_size( 'lgreco-homepage', 150, 150, false);
+  
    function register_products_type(){
        $productlabels = array(
                'name'               => 'Products',
@@ -161,6 +164,36 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 //    } 
 //  </style>';
 //}
+
+function getBreadcrumb($post){
+    $output = '';
+    $cpost = $post;
+    $pid = $cpost->post_parent;
+    while ($pid>0){
+        $cpost = get_post($pid);
+        $output = '<a href="' . get_permalink($pid) .'">' . $cpost->post_title . '</a> &gt; ' . $output;
+        $pid = $cpost->post_parent;
+    }
+    echo $output . $post->post_title;
+}
+
+// Flash cache dashboard
+function clear_cache_dashboard_widget() {
+
+	wp_add_dashboard_widget(
+                 'actions_widget',         // Widget slug.
+                 'Usefull actions',         // Title.
+                 'actions_widget_function' // Display function.
+        );	
+}
+add_action( 'wp_dashboard_setup', 'clear_cache_dashboard_widget' );
+
+function actions_widget_function() {
+
+echo '<a href="options-general.php?page=wpsupercache&tab=contents">Cache</a><br/>
+<a href="nav-menus.php">Menus</a><br/>
+<a href="admin.php?page=metaslider">Slideshows</a>';
+} 
 
 
 ?>

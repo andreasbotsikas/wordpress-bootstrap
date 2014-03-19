@@ -3,7 +3,7 @@
 </div> <!-- end contentContainer -->
 			<footer role="contentinfo" class="pageFooter">
 			
-				<div id="inner-footer" class="container clearfix">
+			    <div id="inner-footer" class="container clearfix">
 				    <div class="pageHover"><p>&nbsp;</p></div>
 				    <?php /* 
                     <div id="widget-footer" class="clearfix row">
@@ -19,11 +19,13 @@
 					<nav class="clearfix">
 						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
-					
-					<p class="pull-right"><?php bloginfo( 'description' ); ?></p>
-			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
-				
+				    <div class="row site-tag">
+				        <p class="col-xs-6 name">&copy; <?php bloginfo('name'); ?></p>
+                        <p class="col-xs-6 description"><?php bloginfo( 'description' ); ?></p>
+				    </div>
+                    <?php echo do_shortcode( '[shareaholic app="share_buttons" id="5061515"]'); ?>
+				<div class="leftShadow"></div>    
+				<div class="rightShadow"></div>    
 				</div> <!-- end #inner-footer -->
 				
 			</footer> <!-- end footer -->
@@ -43,8 +45,7 @@
         <!--[if lt IE 9]>
 			  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->		
-        <?php wp_footer(); // js scripts are inserted using this function ?>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
+        <?php wp_footer(); // js scripts are inserted using this function ?>        
 
 	</body>
 

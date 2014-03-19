@@ -23,9 +23,6 @@ Template Name: Right Sidebar Page
                             <span class="col-sm-3" role="complementary"><?php dynamic_sidebar( 'sidebar1' ); ?></span>
 				            <?php } ?>
 				        </section> <!-- end article section -->
-						<footer>
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-						</footer> <!-- end article footer -->
 					</article> <!-- end article -->
 				    <?php endwhile;
                           else : 

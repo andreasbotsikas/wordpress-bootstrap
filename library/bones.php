@@ -155,7 +155,10 @@ function wp_bootstrap_related_posts() {
 	wp_reset_query();
 	echo '</ul>';
 }
-
+function has_pager(){
+global $wp_query;
+return $wp_query->max_num_pages != null && $wp_query->max_num_pages> 1;
+}
 // Numeric Page Navi (built into the theme by default)
 function page_navi($before = '', $after = '') {
 	global $wpdb, $wp_query;

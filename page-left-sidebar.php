@@ -24,9 +24,6 @@ Template Name: Left Sidebar Page
 				        <span class="col-sm-<?php echo $contentLength; ?>"><?php the_content(); ?></span>
 				           
 				    </section> <!-- end article section -->
-						<footer>
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-						</footer> <!-- end article footer -->
 					</article> <!-- end article -->
 				    <?php endwhile;
                           else : 

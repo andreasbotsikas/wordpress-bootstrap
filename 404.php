@@ -20,9 +20,6 @@
             <?php } ?>
         </section>
         <!-- end article section -->
-        <footer>
-        </footer>
-        <!-- end article footer -->
     </article>
     <!-- end article -->
 </div>

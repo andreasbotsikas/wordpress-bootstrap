@@ -24,8 +24,6 @@
                                     echo '<span class="read-more"><a href="' . get_permalink() . '">' . pll__('Read more...') . ' &raquo;</a></span>';
                               } ?>
 						</section> <!-- end article section -->
-						<footer>
-						</footer> <!-- end article footer -->
 					</article> <!-- end article -->
     <?php endwhile; ?>	
     <?php page_navi(); ?>					
