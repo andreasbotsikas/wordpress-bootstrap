@@ -12,6 +12,7 @@
    pll_register_string('Search', 'Search');
    pll_register_string('Search result for', 'Search results for');
    pll_register_string('Search result categories', 'In categories');
+   pll_register_string('All products', 'All products');
    pll_register_string('Products more', 'Read more...');
    pll_register_string('Products in category', 'Category products');
   pll_register_string('404 Header', 'Not found (404)');
@@ -138,7 +139,9 @@ wp_enqueue_script('lightbox');
 }
 add_action( 'wp_enqueue_scripts', 'lgreco_scripts' );
 
-add_filter( 'post_thumbnail_html', 'my_lightbox_image_html', 10, 3 );
+
+// Use the following when you want to invoke it
+//add_filter( 'post_thumbnail_html', 'my_lightbox_image_html', 10, 3 );
 
 function my_lightbox_image_html( $html, $post_id, $post_image_id ) {
     if  (!empty($html)){

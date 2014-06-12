@@ -57,6 +57,6 @@
 			</div> <!-- end .navbar -->
 		
 		</header> <!-- end header -->
-		<div class="contentContainer">
+	<!--	<div class="contentContainer">-->
 <div class="container">
     <div id="content" class="clearfix row">

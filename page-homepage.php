@@ -26,7 +26,7 @@ Template Name: Homepage
 
         <section class="row post_content">
             <?php if (has_post_thumbnail()){?>
-            <span class="col-sm-3"><?php the_post_thumbnail( 'lgreco-homepage' );?></span>
+            <span class="col-sm-3 post-thumbnail"><?php the_post_thumbnail( 'lgreco-homepage' );?></span>
             <?php }?>
             <span class="col-sm-<?php echo $contentLength; ?>"><?php the_content(); ?></span>
             <?php if (is_active_sidebar('sidebar2')){?>

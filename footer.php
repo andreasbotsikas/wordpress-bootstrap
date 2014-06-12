@@ -1,6 +1,7 @@
-        </div>
-</div> <!-- end #container -->
-</div> <!-- end contentContainer -->
+     </div>
+    <!--<div class="push"></div>-->
+    </div> <!-- end #container -->
+<!--</div>  end contentContainer -->
 			<footer role="contentinfo" class="pageFooter">
 			
 			    <div id="inner-footer" class="container clearfix">

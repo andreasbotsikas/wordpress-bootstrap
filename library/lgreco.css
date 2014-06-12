@@ -1,4 +1,4 @@
-body:after {
+﻿body:after {
   content: url(img/zoom_icon.png) url(search_hover.png);
   display: none;
 }
@@ -59,17 +59,23 @@ body:after {
 .navbar > .container {
   padding-left: 20px;
   padding-right: 20px;
-  background-image: url('../images/menubg.jpg');
+  /*background-image: url('../images/menubg.jpg');*/
   background-repeat: repeat-x;
-  background-color: #000;
+  background-color: #fff;
 }
 .navbar > .container .navbar-brand {
-  background-image: url('menulogo.png');
+  background-image: url('menulogo_noShadow.png');
   background-repeat: no-repeat;
   width: 204px;
   height: 60px;
   text-indent: -9999px;
   margin: 5px 0;
+}
+.post-thumbnail {
+  text-align: center;
+}
+.post_content p {
+  padding: 0 10px 10px;
 }
 /*@media (max-width: @screen-sm-min), (max-height: @screen-sm-min),(max-device-width: @screen-sm-min), (max-device-height: @screen-sm-min) {
     .navbar-fixed-top{
@@ -83,8 +89,8 @@ body:after {
   margin-top: 20px;
 }
 body {
-  background: url(dottedbg.gif) repeat;
-  /*background-color:@green-light;*/
+  background: url(../images/woodenBackground.jpg) repeat;
+  /*url(./dottedbg.gif) background-color:@green-light;*/
   min-width: 320px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -283,10 +289,8 @@ a {
     }
 }*/
 #content {
-  border: 1px solid #f1f1f1;
   /*padding: 5px;*/
   /*margin-top:35px;*/
-  background-color: #fafafa;
   border-bottom: none;
   margin-top: -25px;
   padding-top: 30px;
@@ -294,22 +298,7 @@ a {
 /*.navbar-fixed-top, .contentContainer{
      background:url(./dottedbg.jpg) repeat;
 }*/
-/*#slider-container {
-    #slideshow {
-        width: 99%;
-        height: 300px;
-        margin: 0 auto;
-        .slide {
-             height: 300px;
-            -moz-background-size: 100%;
-            -o-background-size: 100%;
-            -webkit-background-size: 100%;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            padding: 0;
-        }
-    }
-}*/
+
 .wpcf7-text,
 .wpcf7-captchar {
   width: 60%;
@@ -446,6 +435,11 @@ a {
   right: 0;
   bottom: 0;
 }
+.zoomImage .wp-post-image {
+  -webkit-box-shadow: 0 5px 10px;
+  box-shadow: 0 5px 10px;
+  margin-bottom: 10px;
+}
 .wineproperty .propertyImage {
   background-repeat: no-repeat;
   -moz-background-size: contain;
@@ -462,11 +456,6 @@ a {
 }
 .wineproperty.taste .propertyImage {
   background-image: url(../images/wines/taste.png);
-}
-.products .post_content .wp-post-image {
-  -webkit-box-shadow: 0 5px 10px;
-  box-shadow: 0 5px 10px;
-  margin-bottom: 10px;
 }
 .widget .menu,
 .widget .sub-menu {
@@ -570,3 +559,46 @@ h3 {
 #main.home-page {
   padding-top: 15px;
 }
+.productSpec {
+  padding: 5px;
+}
+.productSpec .specheader {
+  border-bottom: 1px solid;
+  font-size: larger;
+}
+.productSpec .row span.col-xs-5 {
+  border-right: 1px solid;
+}
+a {
+  outline: 0;
+}
+a:focus {
+  outline: none;
+}
+a::-moz-focus-inner {
+  border: 0;
+}
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+body > .container {
+  /*min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -194px;*/
+  background-color: #fafafa;
+}
+body > .container #content {
+  /*border: 1px solid #f1f1f1;*/
+}
+/*.pageFooter, .push{
+    height: 190px;
+}*/

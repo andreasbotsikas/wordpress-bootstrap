@@ -19,7 +19,7 @@ Template Name: Left Sidebar Page
                             <span class="col-sm-3" role="complementary"><?php dynamic_sidebar( 'sidebar1' ); ?></span>
 				            <?php } ?>
 				        <?php if (has_post_thumbnail()){?>
-				        <span class="col-sm-3"><?php the_post_thumbnail( 'lgreco-product' );?></span>
+				        <span class="col-sm-3 post-thumbnail"><?php the_post_thumbnail( 'lgreco-product' );?></span>
 				        <?php }?>
 				        <span class="col-sm-<?php echo $contentLength; ?>"><?php the_content(); ?></span>
 				           

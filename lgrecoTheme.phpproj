@@ -73,6 +73,8 @@
     <Content Include="images\wines\aromas.png" />
     <Content Include="images\wines\color.png" />
     <Content Include="images\wines\taste.png" />
+    <Content Include="images\woodenBackground.jpg" />
+    <Content Include="images\wood_texture.jpg" />
     <Content Include="library\img\close.png" />
     <Content Include="library\img\home_search_bg.png" />
     <Content Include="library\img\loading.gif" />

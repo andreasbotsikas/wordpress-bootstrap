@@ -1317,8 +1317,7 @@ address {
     margin-left: 0%;
   }
 }
-/*@import "code.less";
-@import "tables.less";*/
+
 fieldset {
   padding: 0;
   margin: 0;
@@ -2039,9 +2038,6 @@ input[type="button"].btn-block {
   -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
-/*@import "glyphicons.less";
-@import "dropdowns.less";
-@import "button-groups.less";*/
 .input-group {
   position: relative;
   display: table;
@@ -2897,7 +2893,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-link:hover {
   color: #ffffff;
 }
-/*@import "breadcrumbs.less";*/
 .pagination {
   display: inline-block;
   padding-left: 0;
@@ -3145,10 +3140,7 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
-/*@import "jumbotron.less";
-@import "thumbnails.less";
-@import "alerts.less";
-@import "progress-bars.less";*/
+
 .media,
 .media-body {
   overflow: hidden;
@@ -3177,9 +3169,7 @@ a.list-group-item.active > .badge,
   padding-left: 0;
   list-style: none;
 }
-/*@import "list-group.less";*/
-/*@import "panels.less";
-@import "wells.less";*/
+
 .close {
   float: right;
   font-size: 21px;
@@ -3205,10 +3195,6 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-/*@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
-@import "carousel.less";*/
 .clearfix {
   zoom: 1;
 }

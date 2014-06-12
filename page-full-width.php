@@ -15,7 +15,7 @@ Template Name: Full Width Page
 						</header> <!-- end article header -->
 				        <section class="post_content row">
 				            <?php if (has_post_thumbnail()){?>
-				            <span class="col-sm-3"><?php the_post_thumbnail( 'lgreco-product' );?></span>
+				            <span class="col-sm-3 post-thumbnail"><?php the_post_thumbnail( 'lgreco-product' );?></span>
 				            <?php }?>
 				            <span class="col-sm-<?php echo $contentLength; ?>"><?php the_content(); ?></span>
 				        </section> <!-- end article section -->
