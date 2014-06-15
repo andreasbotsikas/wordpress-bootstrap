@@ -28,7 +28,7 @@ Template Name: Product Category Page
 				            <?php }?>
 				    </section>
                          <?php include "subCategories.php"; ?>
-				        <?php include "productsList.php"; ?>
+				        <?php /*include "productsList.php";*/ include "productsListSimple.php"; ?>
 					</article> <!-- end article -->
 					
 					<?php endwhile; ?>	

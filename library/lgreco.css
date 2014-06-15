@@ -602,3 +602,6 @@ body > .container #content {
 /*.pageFooter, .push{
     height: 190px;
 }*/
+.sliderFix {
+  padding-bottom: 10px;
+}

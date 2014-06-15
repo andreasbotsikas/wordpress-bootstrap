@@ -42,6 +42,7 @@
     <Compile Include="page-right-sidebar.php" />
     <Compile Include="page-underconstruction.php" />
     <Compile Include="page.php" />
+    <Compile Include="productsListSimple.php" />
     <Compile Include="productsList.php" />
     <Compile Include="search.php" />
     <Compile Include="searchform.php" />
