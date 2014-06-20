@@ -28,7 +28,7 @@
         </script>
 	    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	    <?php wp_head(); ?>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,greek' rel='stylesheet' type='text/css'>
 	</head>
 	
 	<body <?php body_class(); ?>>
